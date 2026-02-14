@@ -26,7 +26,7 @@ const questions: QuizQuestion[] = [
     options: ["Chitti wale momos", "Ek dusre k lips", "Purukiya", "Mere hath k chaate"],
     correctIndex: 2,
     wrong: { emoji: "😤", line1: "Kya H??", line2: "Sab bhul jati! Sabse first yaad kr" },
-    correct: { emoji: "🤗", line1: "Thank you my dear ❤️", line2: "" },
+    correct: { emoji: "🤗", line1: "You are more tastier than that 😋", line2: "" },
   },
   {
     question: "When was this photo taken??",
@@ -59,6 +59,10 @@ const QuizPage: React.FC = () => {
   // Read score from sessionStorage
   const getScore = () => parseInt(sessionStorage.getItem("valentine-score") || "0");
 
+  useEffect(() => {
+    setHasAttempted(false);
+  }, [questionIndex]);
+
   const handleAnswer = useCallback(
     (selectedIndex: number) => {
       if (showPopup) return;
@@ -72,6 +76,7 @@ const QuizPage: React.FC = () => {
           newScore += 1;
           sessionStorage.setItem("valentine-score", String(newScore));
         }
+        setHasAttempted(true);
         setPopupData({
           emoji: q.correct.emoji,
           line1: q.correct.line1,
@@ -145,7 +150,7 @@ const QuizPage: React.FC = () => {
           <div className="mb-6 flex justify-center">
             {/* SWAP YOUR PHOTO HERE: Replace the src below with your photo path */}
             <img
-              src="/placeholder.svg"
+              src="/handshake.jpg"
               alt="Our photo together"
               className="w-48 h-48 object-cover rounded-2xl border-4 border-valentine-pink shadow-lg"
             />
