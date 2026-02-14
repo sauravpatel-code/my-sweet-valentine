@@ -53,7 +53,7 @@ const ValentinePage: React.FC = () => {
 
         {/* SWAP YOUR IMAGE HERE: Replace the src below */}
         <img
-          src="/placeholder.svg"
+          src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWhsdW4yYjFrZzhpeWJuNjcwaG01anZiMGtwNGo3OWtqdW1vMjRrYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mRvzQIDr0gHCz82SV0/giphy.gif"
           alt="Valentine"
           className="w-48 h-48 mx-auto object-cover rounded-2xl border-4 border-valentine-pink shadow-lg mb-8"
         />
