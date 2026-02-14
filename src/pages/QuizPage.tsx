@@ -103,6 +103,13 @@ const QuizPage: React.FC = () => {
     [q, questionIndex, navigate, showPopup, hasAttempted]
   );
 
+  // Reset hasAttempted when question changes
+  React.useEffect(() => {
+    setHasAttempted(false);
+    setShowPopup(false);
+    setIsCorrect(false);
+  }, [questionIndex]);
+
   if (!q) return null;
 
   return (
