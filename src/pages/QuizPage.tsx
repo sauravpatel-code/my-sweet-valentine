@@ -152,7 +152,7 @@ const QuizPage: React.FC = () => {
             <img
               src="/handshake.jpg"
               alt="Our photo together"
-              className="w-48 h-48 object-cover rounded-2xl border-4 border-valentine-pink shadow-lg"
+              className="w-full h-48 object-cover rounded-2xl border-4 border-valentine-pink shadow-lg"
             />
           </div>
         )}
