@@ -53,7 +53,7 @@ const CelebrationPage: React.FC = () => {
             </p>
 
             <p className="text-sm text-muted-foreground italic animate-pulse">
-              wait for it......
+              wait for it......💓
             </p>
           </motion.div>
         ) : (
