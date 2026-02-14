@@ -43,7 +43,7 @@ const CelebrationPage: React.FC = () => {
 
             {/* SWAP YOUR GIF HERE: Replace the src below */}
             <img
-              src="/placeholder.svg"
+              src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExajJwOGxrZm55ZXBqaXA1cG5kazZsOXY1OGQ0Nml5cTgzMWFreGhlbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YYRlCWDgUEkYcleu8J/giphy.gif"
               alt="Celebration GIF"
               className="w-48 h-48 mx-auto object-cover rounded-2xl mb-4"
             />
