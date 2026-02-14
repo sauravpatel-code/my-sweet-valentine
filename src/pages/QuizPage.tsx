@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import FloatingHearts from "../components/FloatingHearts";
@@ -108,12 +108,6 @@ const QuizPage: React.FC = () => {
     [q, questionIndex, navigate, showPopup, hasAttempted]
   );
 
-  // Reset hasAttempted when question changes
-  React.useEffect(() => {
-    setHasAttempted(false);
-    setShowPopup(false);
-    setIsCorrect(false);
-  }, [questionIndex]);
 
   if (!q) return null;
 
