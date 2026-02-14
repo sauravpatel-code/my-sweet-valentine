@@ -32,7 +32,10 @@ const Landing: React.FC = () => {
         </p>
 
         <motion.button
-          onClick={() => navigate("/quiz/1")}
+          onClick={() => {
+            sessionStorage.setItem("valentine-score", "0");
+            navigate("/quiz/1");
+          }}
           className="bg-primary text-primary-foreground px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition-shadow"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
